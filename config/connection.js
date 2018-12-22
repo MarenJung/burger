@@ -1,13 +1,7 @@
-// ------------
-// Dependencies
-// ------------
 const mysql = require('mysql');
 
 let connection;
 
-// ----------------------
-// Connection to Database
-// ----------------------
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
@@ -20,9 +14,6 @@ if (process.env.JAWSDB_URL) {
   });
 }
 
-// -----------------
-// Make a connection
-// -----------------
 connection.connect((err) => {
   if (err) {
     console.error(`error connecting: ${err.stack}`);

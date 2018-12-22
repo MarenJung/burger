@@ -1,11 +1,4 @@
-// ----------------------
-// Import MySQL connection
-// ----------------------
 const connection = require('../config/connection');
-
-// --------------------------------------------
-// Generating function for query question marks
-// --------------------------------------------
 
 const questionMarks = (number) => {
   const arr = [];
@@ -15,9 +8,6 @@ const questionMarks = (number) => {
   return arr.toString();
 };
 
-// --------------------------------------------
-// Generating function for MySql syntax
-// --------------------------------------------
 function objToSql(ob) {
   const arr = [];
 
@@ -33,7 +23,6 @@ function objToSql(ob) {
     }
   }
 
-  // translate array of strings to a single comma-separated string
   return arr.toString();
 }
 
@@ -82,7 +71,5 @@ const orm = {
     });
   },
 };
-// ----------
-// Export ORM
-// ----------
+
 module.exports = orm;
